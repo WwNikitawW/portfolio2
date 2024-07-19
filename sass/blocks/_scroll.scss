@@ -1,0 +1,17 @@
+body {
+    overflow-x: auto;  
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+        display: block;
+        height: 7px;
+    }
+    &::-webkit-scrollbar-thumb {
+        display: block;
+        background: $maine-color;
+        border-radius: 2px;
+    }
+    &::-webkit-scrollbar-track {
+        display: block;
+        background: #6afaca;
+    }
+}

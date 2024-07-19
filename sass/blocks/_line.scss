@@ -1,0 +1,8 @@
+.line {
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: $maine-color;
+    left: 50%;
+    transform: translateX(-50%);
+}

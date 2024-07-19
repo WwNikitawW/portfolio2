@@ -1,0 +1,106 @@
+.portfolio {
+    &__title {
+        text-align: center;
+        margin-bottom: 15px;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 36px;
+            width: 36px;
+            border-radius: 100%;
+            background-color: $maine-color;
+            z-index: -1;
+            margin-left: 28px;
+            margin-top: -7px;
+        }
+    }
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__wrapper {
+        padding-top:85px ;
+        max-width: 1140px;
+        /* display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 270px));
+        grid-template-rows: repeat(auto-fill, minmax(270px, auto));
+        gap: 7px; */
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        justify-content: space-around;
+
+        overflow: hidden;
+    }
+    &__item {
+        animation: scroll 10s linear infinite;
+        transition: all 0.6s;
+        /* &:hover {
+            transform: rotate(360deg);
+            box-shadow: 16px 16px 4px rgba(161, 255, 224, 0.8);
+        } */
+        img {
+            border-radius: 5px;
+            width: 240px;
+            margin: 5px;
+            filter: blur(2px);
+            &:hover {
+                /* transform: scale(1.05);
+                filter: hue-rotate(270deg); */
+                filter: contrast(130%);
+            }
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-650%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@media (max-width: 1150px) {
+    .portfolio {
+        padding-top: 100px;
+        &__wrapper {
+            padding-top:85px ;
+            padding-bottom: 55px;
+            max-width: 1140px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 270px));
+            grid-template-rows: repeat(auto-fill, minmax(270px, auto));
+            gap: 7px;
+            justify-content: space-around;
+        }
+        &__item {
+            animation: none;
+            &:hover {
+                transform: rotate(360deg);
+                box-shadow: 0px 0px 15px 10px rgba(164, 255, 161, 0.9);
+                z-index: 9;
+            }
+            img {
+                width: 100%;
+                margin: 0px;
+                &:hover {
+                    transform: scale(1.05);
+                    filter: hue-rotate(270deg);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .portfolio {
+        padding-top: 100px;
+    }
+}

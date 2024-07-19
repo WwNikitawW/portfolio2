@@ -1,0 +1,14 @@
+* {
+    cursor: none;
+    mix-blend-mode: normal;
+}
+#cursor {
+    display: block;
+    position: absolute;
+    user-select: none;
+    mix-blend-mode: difference;
+    color: #fff;
+    font-size: 30px;
+    z-index: 10000;
+    rotate: -120deg;
+}

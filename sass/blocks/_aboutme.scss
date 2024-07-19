@@ -1,0 +1,53 @@
+.aboutme {
+    position: relative;
+    min-height: 585px;
+    text-align: center;
+    padding-top: 120px;
+    &__title {
+        position: relative;
+        padding-left: 0px;
+        z-index: 2;
+        margin-bottom: 15px;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 36px;
+            width: 36px;
+            border-radius: 100%;
+            background-color: $maine-color;
+            z-index: -1;
+            margin-left: -13px;
+            margin-top: -8px;
+        }
+    }
+    &__line {
+        margin-top: 15px;
+    }
+    &__subtitle {
+        padding-top: 30px;
+        text-align: center;
+    }
+    &__text {
+        padding-left: 25px;
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 21px;
+        &::before {
+            content: '';
+            position: absolute;
+            margin-left: -25px;
+            margin-top: 2px;
+            width: 15px;
+            height: 15px;
+            border: 1px solid $maine-color;
+            background-color: $maine-color;
+            border-radius: 100%;
+        }
+        &:hover {
+            &::before {
+                    border: 2px solid #B2FAFF;
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.prilist {
+    padding-top: 120px;
+    &__title {
+        text-align: center;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 36px;
+            width: 36px;
+            border-radius: 100%;
+            background-color: $maine-color;
+            z-index: -1;
+            margin-left: 29px;
+            margin-top: -8px;
+        }
+    }
+    &__line {
+        margin-top: 18px;
+    }
+    &__content {
+        max-width: 1140px;
+        margin: 85px auto 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 380px));
+        grid-template-rows: repeat(2, minmax(45px, auto));
+        gap: 30px;
+        justify-content: space-between;
+        &-item {
+            display: grid;
+            grid-template: repeat(2, minmax(21px, auto)) / repeat(2, auto);
+            row-gap: 5px;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+    }
+    &__price {
+        justify-self: end;
+    }
+    &__subtitle {
+        margin-left: 25px;
+        &::before {
+            content: '';
+            position: absolute;
+            margin-left: -25px;
+            margin-top: 2px;
+            width: 15px;
+            height: 15px;
+            border: 1px solid $maine-color;
+            background-color: $maine-color;
+            border-radius: 100%;
+        }
+        &:hover {
+            &::before {
+                    border: 2px solid #B2FAFF;
+            }
+        }
+    }
+    &__text {
+        font-size: 12px;
+        line-height: 18px;
+        grid-column: 1 / 3;
+    }
+}
